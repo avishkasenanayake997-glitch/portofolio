@@ -188,7 +188,7 @@ export default function Projects() {
                         whileTap={{ scale: 0.95 }}
                         className="w-10 h-10 rounded-xl glass-card border border-border flex items-center justify-center hover:border-violet-500/40 transition-colors"
                       >
-                        <Github className="w-4 h-4 text-muted-foreground hover:text-white transition-colors" />
+                        <GitBranch className="w-4 h-4 text-muted-foreground hover:text-white transition-colors" />
                       </motion.button>
                     </div>
                   </div>
