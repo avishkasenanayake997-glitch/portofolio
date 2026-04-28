@@ -76,14 +76,20 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-  // Grid dots
-  const dots = Array.from({ length: 80 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    delay: Math.random() * 5,
-    size: Math.random() * 3 + 1,
-  }));
+  const [dots, setDots] = useState<{ id: number; x: number; y: number; delay: number; size: number }[]>([]);
+
+  useEffect(() => {
+    // Generate grid dots only on the client side
+    setDots(
+      Array.from({ length: 80 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        delay: Math.random() * 5,
+        size: Math.random() * 3 + 1,
+      }))
+    );
+  }, []);
 
   return (
     <section
