@@ -206,9 +206,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="inline-block gradient-border p-px rounded-2xl"
+          className="inline-block gradient-border p-px rounded-2xl w-full max-w-sm sm:max-w-md mx-auto"
         >
-          <div className="glass-card rounded-2xl px-6 py-4 font-mono text-sm text-left">
+          <div className="glass-card rounded-2xl px-4 sm:px-6 py-4 font-mono text-xs sm:text-sm text-left overflow-hidden">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
