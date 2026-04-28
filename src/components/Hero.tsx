@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { ChevronDown, Download, Mail, Github, Linkedin, Terminal } from "lucide-react";
+import { ChevronDown, Download, Mail, Terminal } from "lucide-react";
 
 const roles = [
   "IT Support Specialist",
@@ -64,7 +64,7 @@ function FloatingOrb({ x, y, size, color, delay }: { x: string; y: string; size:
         duration: 8,
         delay,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       }}
     />
   );
