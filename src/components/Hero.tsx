@@ -72,8 +72,8 @@ function FloatingOrb({ x, y, size, color, delay }: { x: string; y: string; size:
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   // Grid dots
@@ -89,7 +89,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden"
     >
       {/* Animated orbs */}
       <FloatingOrb x="5%" y="15%" size="500px" color="radial-gradient(circle, #7c3aed, transparent)" delay={0} />
