@@ -14,14 +14,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Avishka Sahan | IT Specialist & Developer",
+  title: "Avishka Senanayake | Software Engineer",
   description:
-    "Personal portfolio of Avishka Sahan — IT undergraduate at SLIIT, developer, and IT support specialist. Explore projects, skills, and contact info.",
-  keywords: ["Avishka Sahan", "IT Support", "Web Developer", "SLIIT", "Portfolio", "React", "Next.js"],
-  authors: [{ name: "Avishka Sahan" }],
+    "Personal portfolio of Avishka Senanayake — Software Engineer and IT undergraduate at SLIIT. Hands-on experience in full-stack development, mobile apps, AI systems, and Next.js engineering.",
+  keywords: [
+    "Avishka Senanayake",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "React",
+    "Next.js",
+    "React Native",
+    "Python",
+    "FastAPI",
+    "AI",
+    "SLIIT",
+    "Portfolio",
+  ],
+  authors: [{ name: "Avishka Senanayake" }],
   openGraph: {
-    title: "Avishka Sahan | IT Specialist & Developer",
-    description: "IT undergraduate at SLIIT with a passion for development and IT support.",
+    title: "Avishka Senanayake | Software Engineer",
+    description:
+      "Software Engineer & IT Undergraduate at SLIIT. Explore full-stack, mobile, and AI engineering projects.",
     type: "website",
   },
 };

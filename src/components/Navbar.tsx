@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { Menu, X, Code2, Cpu, Folder, User, Mail } from "lucide-react";
+import { Menu, X, Code2, Cpu, Folder, User, Mail, Briefcase } from "lucide-react";
 
 const navItems = [
   { label: "About", href: "#about", icon: User },
+  { label: "Experience", href: "#experience", icon: Briefcase },
   { label: "Skills", href: "#skills", icon: Cpu },
   { label: "Projects", href: "#projects", icon: Folder },
   { label: "Contact", href: "#contact", icon: Mail },
@@ -23,7 +24,7 @@ export default function Navbar() {
   }, [scrollY]);
 
   useEffect(() => {
-    const sections = ["about", "skills", "projects", "contact"];
+    const sections = ["about", "experience", "skills", "projects", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

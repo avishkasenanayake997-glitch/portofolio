@@ -17,24 +17,24 @@ const softSkills = [
 
 const education = [
   {
-    degree: "B.Sc. (Hons) in Information Technology",
+    degree: "BSc (Hons) in Information Technology",
     school: "Sri Lanka Institute of Information Technology (SLIIT)",
-    year: "2021 – Present",
+    year: "2022 – 2026",
     type: "Undergraduate",
     color: "from-violet-600 to-cyan-500",
     glow: "glow-violet",
   },
   {
     degree: "GCE Advanced Level",
-    school: "Science for Technology | Engineering Technology | ICT",
-    year: "2019",
+    school: "A/Central Collage (Results: C2 S1)",
+    year: "2020",
     type: "Secondary",
     color: "from-cyan-600 to-emerald-500",
     glow: "glow-cyan",
   },
   {
     degree: "GCE Ordinary Level",
-    school: "ICT: A | Mathematics: B | Science: A | English: C",
+    school: "A/Central Collage (Results: A7 B1 C1)",
     year: "2016",
     type: "Secondary",
     color: "from-pink-600 to-violet-500",
@@ -92,27 +92,21 @@ export default function About() {
                     <h3 className="text-lg font-bold text-white">Professional Summary</h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-[15px]">
-                    Motivated IT undergraduate at{" "}
-                    <span className="text-violet-400 font-semibold">SLIIT</span> with a strong foundation in
-                    software development and a growing interest in{" "}
-                    <span className="text-cyan-400 font-semibold">IT Support</span> and system administration.
+                    IT undergraduate at <span className="text-violet-400 font-semibold">SLIIT</span> with hands-on experience in full-stack development, mobile apps, and AI systems.
                   </p>
                   <p className="text-muted-foreground leading-relaxed text-[15px] mt-4">
-                    Skilled in troubleshooting technical issues, supporting end-users, and working in
-                    fast-paced environments. Passionate about delivering reliable IT solutions and enhancing
-                    user experiences through effective{" "}
-                    <span className="text-pink-400 font-semibold">problem-solving</span> and communication.
+                    Skilled in <span className="text-cyan-400 font-semibold">React, Next.js, Node.js, Python</span>, and databases, with a proven passion for building practical, scalable software solutions and high-performing web platforms.
                   </p>
 
                   {/* Quick info */}
                   <div className="mt-6 pt-6 border-t border-border grid grid-cols-1 gap-3">
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <MapPin className="w-4 h-4 text-pink-400 flex-shrink-0" />
-                      <span>Mannar Road, Medawachchiya, Sri Lanka</span>
+                      <span>Malabe, Western Province, Sri Lanka</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <GraduationCap className="w-4 h-4 text-violet-400 flex-shrink-0" />
-                      <span>B.Sc. (Hons) IT — SLIIT (Undergraduate)</span>
+                      <span>BSc (Hons) in Information Technology — SLIIT (2022–2026)</span>
                     </div>
                   </div>
                 </div>

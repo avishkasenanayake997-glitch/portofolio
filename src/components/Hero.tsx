@@ -5,10 +5,11 @@ import { useRef, useEffect, useState } from "react";
 import { ChevronDown, Download, Mail, Terminal } from "lucide-react";
 
 const roles = [
-  "IT Support Specialist",
   "Full-Stack Developer",
+  "React & Next.js Engineer",
+  "AI & Mobile App Developer",
+  "IT Support Specialist",
   "SLIIT Undergraduate",
-  "Problem Solver",
 ];
 
 function TypewriterText({ words }: { words: string[] }) {
@@ -138,10 +139,29 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-violet-500/30 text-sm font-medium text-violet-300 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-violet-500/30 text-sm font-medium text-violet-300 mb-6"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          Available for opportunities
+          Software Engineer · Available for opportunities
+        </motion.div>
+
+        {/* Profile Avatar from CV */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-6"
+        >
+          <div className="relative">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-violet-600 via-cyan-400 to-pink-500 shadow-xl shadow-violet-500/30">
+              <img
+                src="/avatar.jpg"
+                alt="Avishka Senanayake"
+                className="w-full h-full object-cover rounded-full border-2 border-background"
+              />
+            </div>
+            <span className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-400 border-2 border-background shadow-md shadow-emerald-400/50" />
+          </div>
         </motion.div>
 
         {/* Name */}
@@ -153,7 +173,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-4 leading-tight tracking-tight">
             <span className="gradient-text">Avishka</span>
             <br />
-            <span className="text-white">Sahan</span>
+            <span className="text-white">Senanayake</span>
           </h1>
         </motion.div>
 
@@ -172,11 +192,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed mb-10"
+          className="max-w-2xl mx-auto text-muted-foreground text-base sm:text-lg leading-relaxed mb-10"
         >
-          Motivated IT undergraduate at{" "}
-          <span className="text-violet-400 font-semibold">SLIIT</span>, passionate about
-          building reliable IT solutions and crafting modern web experiences.
+          IT undergraduate at{" "}
+          <span className="text-violet-400 font-semibold">SLIIT</span> with hands-on experience in full-stack development, mobile apps, and AI systems. Skilled in React, Next.js, Node.js, Python, and databases, with a passion for building practical software solutions.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -197,7 +216,7 @@ export default function Hero() {
           </motion.a>
           <motion.a
             href="/cv.pdf"
-            download
+            download="Avishka_Senanayake_CV.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className="px-8 py-3.5 rounded-xl glass-card border border-violet-500/40 text-white font-bold flex items-center gap-2 text-lg hover:border-violet-400 transition-all duration-300"
@@ -222,11 +241,13 @@ export default function Hero() {
               <span className="ml-2 text-muted-foreground text-xs">terminal</span>
             </div>
             <div className="space-y-1">
-              <p><span className="text-violet-400">$</span> <span className="text-cyan-400">const</span> <span className="text-white">dev</span> = <span className="text-green-400">&#123;</span></p>
-              <p className="pl-4"><span className="text-amber-400">name</span>: <span className="text-orange-300">&quot;Avishka Sahan&quot;</span>,</p>
-              <p className="pl-4"><span className="text-amber-400">role</span>: <span className="text-orange-300">&quot;IT Support & Developer&quot;</span>,</p>
-              <p className="pl-4"><span className="text-amber-400">uni</span>: <span className="text-orange-300">&quot;SLIIT&quot;</span>,</p>
-              <p className="pl-4"><span className="text-amber-400">status</span>: <span className="text-emerald-400">&quot;Available&quot;</span> <span className="text-green-400">✓</span></p>
+              <p><span className="text-violet-400">$</span> <span className="text-cyan-400">const</span> <span className="text-white">engineer</span> = <span className="text-green-400">&#123;</span></p>
+              <p className="pl-4"><span className="text-amber-400">name</span>: <span className="text-orange-300">&quot;Avishka Senanayake&quot;</span>,</p>
+              <p className="pl-4"><span className="text-amber-400">role</span>: <span className="text-orange-300">&quot;Software Engineer&quot;</span>,</p>
+              <p className="pl-4"><span className="text-amber-400">internship</span>: <span className="text-orange-300">&quot;IM~pact-A AI Limited&quot;</span>,</p>
+              <p className="pl-4"><span className="text-amber-400">education</span>: <span className="text-orange-300">&quot;SLIIT (BSc Hons IT)&quot;</span>,</p>
+              <p className="pl-4"><span className="text-amber-400">location</span>: <span className="text-orange-300">&quot;Malabe, Sri Lanka&quot;</span>,</p>
+              <p className="pl-4"><span className="text-amber-400">status</span>: <span className="text-emerald-400">&quot;Available for Opportunities&quot;</span> <span className="text-green-400">✓</span></p>
               <p><span className="text-green-400">&#125;</span></p>
             </div>
           </div>

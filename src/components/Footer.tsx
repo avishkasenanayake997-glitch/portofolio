@@ -12,14 +12,14 @@ export default function Footer() {
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 flex items-center justify-center">
             <Code2 className="w-4 h-4 text-white" />
           </div>
-          <span className="font-bold gradient-text">Avishka Sahan</span>
+          <span className="font-bold gradient-text">Avishka Senanayake</span>
         </div>
 
         {/* Credit */}
         <p className="text-muted-foreground text-sm flex items-center gap-1.5">
           Built with
           <Heart className="w-3.5 h-3.5 text-pink-400 fill-pink-400" />
-          using Next.js, shadcn/ui & Framer Motion
+          using Next.js, React 19 &amp; Framer Motion
         </p>
 
         {/* Back to top */}
@@ -36,7 +36,7 @@ export default function Footer() {
 
       <div className="mt-6 text-center">
         <p className="text-muted-foreground/50 text-xs">
-          © {new Date().getFullYear()} Avishka Sahan. All rights reserved.
+          © {new Date().getFullYear()} Avishka Senanayake. All rights reserved.
         </p>
       </div>
     </footer>

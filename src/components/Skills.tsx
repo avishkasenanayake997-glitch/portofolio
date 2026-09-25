@@ -4,36 +4,35 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Cpu, Code2, Sparkles, Wrench, Globe, Layers } from "lucide-react";
 
-const itSupportSkills = [
-  { name: "Hardware & Software Troubleshooting", level: 85, color: "#7c3aed" },
-  { name: "Windows OS & System Config", level: 80, color: "#06b6d4" },
-  { name: "Networking (IP, DNS, LAN)", level: 70, color: "#ec4899" },
-  { name: "Software Installation & Config", level: 90, color: "#10b981" },
-  { name: "IT Infrastructure & Services", level: 75, color: "#f59e0b" },
+const fullstackSkills = [
+  { name: "React.js & Next.js (App Router, TSX)", level: 90, color: "#38bdf8" },
+  { name: "JavaScript & TypeScript", level: 88, color: "#f59e0b" },
+  { name: "Node.js & Express.js (REST APIs)", level: 85, color: "#4ade80" },
+  { name: "Tailwind CSS & CSS Modules", level: 90, color: "#06b6d4" },
+  { name: "MongoDB, SQL & Firebase", level: 82, color: "#10b981" },
 ];
 
-const devSkills = [
-  { name: "JavaScript", level: 82, color: "#f59e0b" },
-  { name: "React.js", level: 80, color: "#38bdf8" },
-  { name: "Node.js / Express.js", level: 75, color: "#4ade80" },
-  { name: "PHP / Laravel", level: 70, color: "#a78bfa" },
-  { name: "Java / C / C++", level: 68, color: "#f87171" },
-  { name: "HTML & CSS", level: 90, color: "#fb923c" },
+const aiMobileCloudSkills = [
+  { name: "Python & FastAPI Microservices", level: 86, color: "#a78bfa" },
+  { name: "AI / ML (FAISS, Sentence Transformers)", level: 82, color: "#ec4899" },
+  { name: "React Native (Expo, Zustand, NativeWind)", level: 85, color: "#38bdf8" },
+  { name: "Git, GitHub & CI/CD Workflows", level: 90, color: "#10b981" },
+  { name: "AWS & Cloud Infrastructure", level: 75, color: "#f59e0b" },
 ];
 
 const techBadges = [
-  { label: "JavaScript", icon: "⚡", color: "bg-amber-500/10 text-amber-300 border-amber-500/30" },
-  { label: "React.js", icon: "⚛️", color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/30" },
-  { label: "Node.js", icon: "🟢", color: "bg-emerald-500/10 text-emerald-300 border-emerald-500/30" },
-  { label: "Express.js", icon: "🚀", color: "bg-gray-500/10 text-gray-300 border-gray-500/30" },
-  { label: "Laravel", icon: "🔴", color: "bg-red-500/10 text-red-300 border-red-500/30" },
-  { label: "PHP", icon: "🐘", color: "bg-violet-500/10 text-violet-300 border-violet-500/30" },
-  { label: "Kotlin", icon: "🎯", color: "bg-orange-500/10 text-orange-300 border-orange-500/30" },
-  { label: "Firebase", icon: "🔥", color: "bg-yellow-500/10 text-yellow-300 border-yellow-500/30" },
-  { label: "HTML/CSS", icon: "🎨", color: "bg-pink-500/10 text-pink-300 border-pink-500/30" },
-  { label: "Figma", icon: "✏️", color: "bg-purple-500/10 text-purple-300 border-purple-500/30" },
-  { label: "Git", icon: "🌿", color: "bg-green-500/10 text-green-300 border-green-500/30" },
-  { label: "Linux", icon: "🐧", color: "bg-slate-500/10 text-slate-300 border-slate-500/30" },
+  { label: "React / Next.js", icon: "⚛️", color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/30" },
+  { label: "Node.js / Express", icon: "🟢", color: "bg-emerald-500/10 text-emerald-300 border-emerald-500/30" },
+  { label: "JavaScript / TypeScript", icon: "🔷", color: "bg-blue-500/10 text-blue-300 border-blue-500/30" },
+  { label: "Python / FastAPI", icon: "🐍", color: "bg-yellow-500/10 text-yellow-300 border-yellow-500/30" },
+  { label: "React Native", icon: "📱", color: "bg-sky-500/10 text-sky-300 border-sky-500/30" },
+  { label: "AI / ML & FAISS", icon: "🧠", color: "bg-purple-500/10 text-purple-300 border-purple-500/30" },
+  { label: "MongoDB / SQL / Firebase", icon: "🍃", color: "bg-green-500/10 text-green-300 border-green-500/30" },
+  { label: "AWS Cloud", icon: "☁️", color: "bg-amber-500/10 text-amber-300 border-amber-500/30" },
+  { label: "Git / GitHub", icon: "🌿", color: "bg-emerald-500/10 text-emerald-300 border-emerald-500/30" },
+  { label: "Tailwind CSS", icon: "🌊", color: "bg-teal-500/10 text-teal-300 border-teal-500/30" },
+  { label: "NativeWind & Zustand", icon: "⚡", color: "bg-pink-500/10 text-pink-300 border-pink-500/30" },
+  { label: "Figma UI/UX", icon: "✏️", color: "bg-purple-500/10 text-purple-300 border-purple-500/30" },
 ];
 
 function SkillBar({ name, level, color, delay }: { name: string; level: number; color: string; delay: number }) {
@@ -89,38 +88,18 @@ export default function Skills() {
           <motion.div variants={itemVariants} className="text-center mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
               <Sparkles className="w-3.5 h-3.5" />
-              Technical Skills
+              Technical Competencies
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
-              My <span className="gradient-text">Arsenal</span>
+              Technical <span className="gradient-text">Skills</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-              A combination of IT support expertise and modern development skills.
+              Production-tested stack spanning full-stack web, distributed AI systems, cross-platform mobile, and cloud environments.
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {/* IT Support Skills */}
-            <motion.div variants={itemVariants} className="gradient-border p-px rounded-2xl">
-              <div className="glass-card rounded-2xl p-7 h-full">
-                <div className="flex items-center gap-3 mb-7">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-pink-500 flex items-center justify-center glow-violet">
-                    <Cpu className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-white">IT Support Skills</h3>
-                    <p className="text-xs text-muted-foreground">Hardware, Networks & Systems</p>
-                  </div>
-                </div>
-                <div className="space-y-5">
-                  {itSupportSkills.map((skill, i) => (
-                    <SkillBar key={skill.name} {...skill} delay={0.2 + i * 0.1} />
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Programming Skills */}
+            {/* Frontend & Full-Stack Skills */}
             <motion.div variants={itemVariants} className="gradient-border p-px rounded-2xl">
               <div className="glass-card rounded-2xl p-7 h-full">
                 <div className="flex items-center gap-3 mb-7">
@@ -128,12 +107,32 @@ export default function Skills() {
                     <Code2 className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-white">Programming & Dev</h3>
-                    <p className="text-xs text-muted-foreground">Languages, Frameworks & Tools</p>
+                    <h3 className="text-base font-bold text-white">Full-Stack & Web Engineering</h3>
+                    <p className="text-xs text-muted-foreground">React, Next.js, Node.js, Express & Databases</p>
                   </div>
                 </div>
                 <div className="space-y-5">
-                  {devSkills.map((skill, i) => (
+                  {fullstackSkills.map((skill, i) => (
+                    <SkillBar key={skill.name} {...skill} delay={0.2 + i * 0.1} />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* AI, Mobile & Cloud */}
+            <motion.div variants={itemVariants} className="gradient-border p-px rounded-2xl">
+              <div className="glass-card rounded-2xl p-7 h-full">
+                <div className="flex items-center gap-3 mb-7">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-pink-500 flex items-center justify-center glow-violet">
+                    <Cpu className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-white">AI, Mobile & Cloud Systems</h3>
+                    <p className="text-xs text-muted-foreground">Python, FastAPI, FAISS, React Native & AWS</p>
+                  </div>
+                </div>
+                <div className="space-y-5">
+                  {aiMobileCloudSkills.map((skill, i) => (
                     <SkillBar key={skill.name} {...skill} delay={0.2 + i * 0.1} />
                   ))}
                 </div>
@@ -166,10 +165,10 @@ export default function Skills() {
           {/* Stats row */}
           <motion.div variants={itemVariants} className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { value: "3+", label: "Projects Built", icon: Layers, color: "from-violet-600 to-cyan-500" },
-              { value: "5+", label: "Languages", icon: Code2, color: "from-cyan-600 to-emerald-500" },
-              { value: "3+", label: "Frameworks", icon: Wrench, color: "from-pink-600 to-violet-500" },
-              { value: "2", label: "Languages Spoken", icon: Globe, color: "from-amber-500 to-orange-500" },
+              { value: "7+", label: "Projects Completed", icon: Layers, color: "from-violet-600 to-cyan-500" },
+              { value: "6+", label: "Languages & Tools", icon: Code2, color: "from-cyan-600 to-emerald-500" },
+              { value: "5+", label: "Modern Frameworks", icon: Wrench, color: "from-pink-600 to-violet-500" },
+              { value: "100%", label: "Dedication & Focus", icon: Globe, color: "from-amber-500 to-orange-500" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
