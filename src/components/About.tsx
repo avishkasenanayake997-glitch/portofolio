@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, MapPin, Sparkles, Target, Heart } from "lucide-react";
+import { GraduationCap, MapPin, Target, Heart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const softSkills = [
@@ -71,11 +71,7 @@ export default function About() {
         >
           {/* Heading */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-violet-500/30 text-violet-300 text-sm font-medium mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              About Me
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
+            <h2 className="text-4xl md:text-5xl font-black text-white">
               Who I <span className="gradient-text">Am</span>
             </h2>
           </motion.div>

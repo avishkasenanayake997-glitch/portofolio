@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   Briefcase,
-  Sparkles,
   Calendar,
   Building,
   CheckCircle2,
@@ -74,11 +73,7 @@ export default function Experience() {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-violet-500/30 text-violet-300 text-sm font-medium mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              Career Journey
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
+            <h2 className="text-4xl md:text-5xl font-black text-white">
               Work <span className="gradient-text">Experience</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-base">

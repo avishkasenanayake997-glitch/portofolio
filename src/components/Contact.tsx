@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {
   Mail, Phone, MapPin, Send, GitBranch, Globe, AtSign,
-  Sparkles, CheckCircle, Loader2
+  CheckCircle, Loader2
 } from "lucide-react";
 
 const contactInfo = [
@@ -95,11 +95,7 @@ export default function Contact() {
         >
           {/* Heading */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              Get In Touch
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
+            <h2 className="text-4xl md:text-5xl font-black text-white">
               Let&apos;s <span className="gradient-text">Connect</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">

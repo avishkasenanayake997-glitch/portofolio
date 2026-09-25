@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Cpu, Code2, Sparkles, Wrench, Globe, Layers } from "lucide-react";
+import { Cpu, Code2, Wrench, Globe, Layers } from "lucide-react";
 
 const fullstackSkills = [
   { name: "React.js & Next.js (App Router, TSX)", level: 90, color: "#38bdf8" },
@@ -86,11 +86,7 @@ export default function Skills() {
         >
           {/* Heading */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              Technical Competencies
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">
+            <h2 className="text-4xl md:text-5xl font-black text-white">
               Technical <span className="gradient-text">Skills</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
